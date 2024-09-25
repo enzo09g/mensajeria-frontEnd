@@ -1,0 +1,350 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #EAEBF0;
+}
+
+.contaienr-logo-input {
+    gap: 4px;
+    display: flex;
+}
+
+nav {
+    background-color: #48669E;
+    padding: 2px 62px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-input {
+    width: 450px;
+    height: 80%;
+    display: flex;
+    background-color: white;
+    position: relative;
+    border-radius: 4px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    &::after {
+        content: "Buscar en Facebook";
+        position: absolute;
+        font-size: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: .7;
+        left: 10px;
+        pointer-events: none;
+        font-weight: 200;
+    }
+}
+
+.input-header {
+    width: 100%;
+    height: 100%;
+    padding: 4px 12px;
+    border-radius: 4px;
+    border: none;
+    font-size: 16px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+
+.fb-logo {
+    background-image: url("https://img.icons8.com/?size=100&id=527gx57f8tmL&format=png&color=000000");
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 30px;
+
+}
+
+.btn-input {
+    background-image: url('https://img.icons8.com/?size=100&id=12773&format=png&color=000000');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-color: transparent;
+    border: none;
+    width: 42px;
+    cursor: pointer;
+}
+
+.icons {
+    width: 30px;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    margin: 0 3px;
+}
+
+.icons.mensaje {
+    background-image: url('https://img.icons8.com/?size=100&id=113622&format=png&color=000000');
+}
+
+.icons.addFriend {
+    background-image: url('https://img.icons8.com/?size=100&id=23269&format=png&color=000000');
+}
+
+.icons.notification {
+    background-image: url('https://img.icons8.com/?size=100&id=11668&format=png&color=000000');
+}
+
+.profilePicture {
+    background-image: url('https://unavatar.io/kikobeats?ttl=1h');
+    background-color: transparent;
+    background-position: center;
+    background-size: cover;
+}
+
+ul {
+    display: flex;
+
+    li {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: inline-flex;
+        color: white;
+        padding: 0 15px;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            display: inline-flex;
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 700;
+            font-size: 14px;
+        }
+    }
+}
+
+.container-navbar {
+    display: flex;
+    height: 100%;
+}
+
+.container-profilePicture {
+    img {
+        width: 33px;
+        height: 33px;
+        border-radius: 1000px;
+    }
+}
+
+
+
+
+
+main {
+    flex-grow: 1;
+    padding: 20px 30px;
+    gap: 10px;
+    display: grid;
+    grid-template-columns: 0.7fr 2fr 1fr;
+
+
+    aside {
+        grid-column: span 1;
+        display: grid;
+        gap: 10px;
+        grid-template-rows: 1fr repeat(3, 4fr);
+
+        header {
+            font-size: 16px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: flex;
+            gap: 5px;
+
+            img {
+                width: 30px;
+                height: 30px;
+                border-radius: 1000px;
+            }
+        }
+
+        .aside-list {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+            list-style-type: none;
+            align-items: start;
+            padding: 0 12px;
+
+            li {
+                color: black;
+                font-weight: 500;
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                font-weight: 600;
+                font-size: 16px;
+            }
+        }
+
+        section {
+            grid-column: span 1;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+
+.div-updateStatus {
+    width: 100%;
+    background-color: #F5F5F5;
+    height: 150px;
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    border: 1px solid #E2E4E6;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.div-updateStatus span {
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 10px;
+}
+
+.header-buttons {
+    display: flex;
+    border: 1px solid #EDEDEF;
+    padding: 3px 5px;
+
+    .section-header-button {
+        display: flex;
+        align-items: center;
+        border-right: 1px solid #E2E4E6;
+        padding: 0 4px;
+    }
+
+    .section-header-button:last-child {
+        border: none;
+    }
+}
+
+.headerIcon {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    width: 20px;
+    height: 30px;
+    display: flex;
+}
+
+.headerIcon.pencil {
+    background-image: url('https://img.icons8.com/?size=100&id=11762&format=png&color=000000');
+}
+
+.headerIcon.list {
+    background-image: url('https://img.icons8.com/?size=100&id=8800&format=png&color=000000');
+}
+
+.headerIcon.camera {
+    background-image: url('https://img.icons8.com/?size=100&id=11402&format=png&color=000000');
+}
+
+.main-input {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 5px 10px;
+    padding-bottom: 15px;
+    border: 1px solid #E2E4E6;
+}
+
+.update-img {
+    background-image: url('https://unavatar.io/kikobeats?ttl=1h');
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 1000px;
+    width: 38px;
+    height: 38px;
+    display: flex;
+}
+
+.input-main {
+    width: 100%;
+    border: none;
+    padding: 10px 15px;
+    line-height: 22px;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.footer-buttons {
+    padding: 5px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: white;
+}
+
+.div-footer {
+    display: flex;
+    padding: 7px 10px;
+    background-color: #e2e4e668;
+    border-radius: 1000px;
+
+    span {
+        padding: 0 4px;
+    }
+}
+
+.footer-icon {
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+}
+
+.footer-icon.listIcon {
+    background-image: url('https://img.icons8.com/?size=100&id=qTpBZcesrDao&format=png&color=000000');
+}
+
+.footer-icon.galeryIcon{
+    background-image: url('https://img.icons8.com/?size=100&id=53433&format=png&color=000000');
+}
+
+.footer-icon.tagFriend{
+    background-image: url('https://img.icons8.com/?size=100&id=25618&format=png&color=000000');
+}
+
+
+.right-aside{
+    grid-column: span 1;
+    display: grid;
+    grid-template-rows: 2fr 5fr;
+}
+
+.right-aside-stories{
+    grid-row: 1span;
+    background-color: white;
+    gap: 20px;
+}
+
+.right-aside-grupos-sugeridos{
+    background-color: white;
+}

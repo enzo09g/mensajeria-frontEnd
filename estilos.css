@@ -1,0 +1,313 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+}
+
+
+main {
+    min-height: calc(100vh - 64px);
+    background-color: aquamarine;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #1877f2;
+    display: flex;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 0px;
+
+
+
+    .headerContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 30px;
+        border-radius: 10px;
+
+        img {
+            width: 80%;
+            height: auto;
+        }
+
+        h1 {
+            font-size: 35px;
+            /* line-height: 0px; */
+            /* font-variant: small-caps; */
+            /* letter-spacing: 1px; */
+            /* font-style: italic; */
+        }
+    }
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: aquamarine;
+}
+
+.container-input {
+    background-color: white;
+    display: flex;
+    width: 300px;
+    gap: 5px;
+    border-radius: 4px;
+    border: 1px solid black;
+    padding: 4px 0;
+    padding-left: 10px;
+    transition: all 0.2s;
+    position: relative;
+
+    &:focus-within button {
+        background-color: red;
+        outline: 1px solid black;
+    }
+
+    &:focus-within {
+        outline: 2px solid rgb(144, 144, 244);
+        box-shadow: 0 0 0 4px lightblue;
+    }
+
+    &.noText::after {
+        content: "Ingrese su " var(--texto);
+        font-style: oblique;
+        color: black;
+        opacity: .8;
+        font-size: 14px;
+        top: 50%;
+        left: var(--left);
+        position: absolute;
+        transform: translate(0, -50%);
+        pointer-events: none;
+        transition: all 0.3s;
+    }
+
+    &:focus-within::after {
+        opacity: 0;
+        transform: translate(50%, -50%);
+    }
+}
+
+
+
+input {
+    padding: 6px 12px;
+    line-height: 20px;
+    font-size: 14px;
+    width: 80%;
+    border: none;
+    border-left: 1px solid black;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+.registrationButton {
+    box-sizing: border-box;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 1000px;
+    background-color: gray;
+    background-image: url("https://img.icons8.com/?size=100&id=87586&format=png&color=000000");
+    background-position: center;
+    background-size: 65%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.registrationButton:hover {
+    box-sizing: border-box;
+    background-color: lightblue;
+    outline: 1px solid black;
+}
+
+.loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.loginButton {
+    padding: 10px 22px;
+    min-width: 100px;
+    max-width: 300px;
+    width: 100%;
+    border: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: #0866FF;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        background-color: #372682;
+        outline: 2px solid white;
+    }
+}
+
+.registrationContainer {
+    display: flex;
+    gap: 4px;
+    font-weight: 700;
+    font-size: 14px;
+
+    p {
+        opacity: .6;
+    }
+
+    span {
+        opacity: .6;
+
+        &:hover {
+            text-decoration: underline;
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+}
+
+.loginForm.disable {
+    display: none;
+}
+
+.registrationForm.disable {
+    display: none;
+}
+
+.registrationContainer.rg.disable {
+    display: none;
+}
+
+.registrationContainer.lg.disable {
+    display: none;
+}
+
+.loginButton.rg.disable {
+    display: none;
+}
+
+.loginButton.lg.disable {
+    display: none;
+}
+
+.footer {
+    height: 220px;
+    border-top: 1px solid black;
+    background-color: #242D47;
+    color: white;
+    padding: 15px 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    .footer-main {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 2fr 1fr 3fr;
+
+        .footer-header {
+            grid-column: 1 / 5;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            display: flex;
+            justify-content: space-between;
+
+
+            .container-icons {
+                display: flex;
+                gap: 0px;
+            }
+        }
+
+        .footer-section {
+            grid-column: 1 / 5;
+            grid-row: 2 / 3;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            .title-section {
+                grid-column: span 1;
+                display: inline;
+                padding: 12px 0;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                font-weight: 500;
+                font-size: 14px;
+            }
+        }
+
+        .footer-list {
+            grid-column: 1 / 5;
+            grid-row: 3 / 4;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            .list {
+                grid-column: span 1;
+                list-style-type: none;
+                font-size: 13px;
+                font-weight: 300;
+                letter-spacing: 1px;
+                opacity: .9;
+
+                li {
+                    padding: 2px 0;
+
+                    span:hover {
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.icon {
+    height: 25px;
+    width: 25px;
+    border-radius: 1000px;
+    background-color: transparent;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon.fb {
+    background-image: url('https://img.icons8.com/?size=100&id=118497&format=png&color=000000');
+}
+
+.icon.tw {
+    background-image: url('https://img.icons8.com/?size=100&id=13963&format=png&color=000000');
+}
+
+.icon.ig {
+    background-image: url('https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000');
+}
+
+.icon.lk {
+    background-image: url('https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000');
+}
+

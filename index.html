@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+
+<body>
+
+    <main>
+        <header>
+            <div class="headerContainer">
+                <div class="logoContainer">
+                    <img src="https://img.icons8.com/?size=100&id=13912&format=png&color=000000" alt="">
+                    <h1>Facebook</h1>
+                </div>
+            </div>
+        </header>
+
+        <section class="container loginForm">
+
+            <div class="container-input noText email">
+                <button class="registrationButton"></button>
+                <input id="emailLg" type="email">
+            </div>
+            <div class="container-input noText contraseña">
+                <button class="registrationButton"></button>
+                <input id="contraseñaLg" type="password">
+            </div>
+        </section>
+
+        <section class="container registrationForm disable">
+
+            <div class="container-input noText nombre">
+                <button class="registrationButton"></button>
+                <input id="nombreRg" type="text">
+            </div>
+            <div class="container-input noText apellido">
+                <button class="registrationButton"></button>
+                <input id="apellidoRg" type="text">
+            </div>
+            <div class="container-input noText email">
+                <button class="registrationButton"></button>
+                <input id="emailRg" type="email">
+            </div>
+            <div class="container-input noText contraseña">
+                <button class="registrationButton"></button>
+                <input id="contraseñaRg" type="password">
+            </div>
+        </section>
+
+        <div class="loginContainer">
+            <button id="loginButton" class="loginButton lg">Iniciar sesión</button>
+            <button id="registrationButton" class="loginButton rg disable">Registrarse</button>
+            <div class="registrationContainer lg">
+                <p class="pLogin">¿No tienes cuenta?
+                </p> <span class="spanLogin lg"> Registrese aqui</span>
+            </div>
+            <div class="registrationContainer rg disable">
+                <p class="pLogin">¿Ya tienes una cuenta?
+                </p> <span class="spanLogin rg"> Inicia Sesion</span>
+            </div>
+        </div>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="footer-header">
+                <div>
+                    <h3>Facebook Enterprise</h3>
+                </div>
+                <div class="container-icons">
+                    <span class="icon fb"></span>
+                    <span class="icon tw"></span>
+                    <span class="icon ig"></span>
+                    <span class="icon lk"></span>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h6 class="title-section col1">Resources</h6>
+                <h6 class="title-section col2">Pricing</h6>
+                <h6 class="title-section col3">Company</h6>
+                <h6 class="title-section col4">Social</h6>
+            </div>
+            <div class="footer-list">
+                <ul class="list">
+                    <li><span>Application</span></li>
+                    <li><span>Documentation</span></li>
+                    <li><span>Synams</span></li>
+                    <li><span>FAQ</span></li>
+                </ul>
+                <ul class="list">
+                    <li><span>Overview</span></li>
+                    <li><span>Plans</span></li>
+                    <li><span>Features</span></li>
+                    <li><span>Compare</span></li>
+                </ul>
+                <ul class="list">
+                    <li><span>About Us</span></li>
+                    <li><span>Blog</span></li>
+                    <li><span>Partnership</span></li>
+                    <li><span>Press</span></li>
+                    <li><span>Cerevere</span></li>
+                </ul>
+                <ul class="list">
+                    <li><span>Facebook</span></li>
+                    <li><span>Twitter</span></li>
+                    <li><span>Instagram</span></li>
+                    <li><span>LinkedIn</span></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./formToggle.js"></script>
+    <script id="inputScript" src="./input.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
