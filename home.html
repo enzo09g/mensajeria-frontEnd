@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="./home.css">
-        <script src="./getToken.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./home.css">
+    <script src="./getToken.js"></script>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
                     <img src="https://unavatar.io/kikobeats?ttl=1h"></img>
                 </div>
                 <ul>
-                    <li><span>Ana Vlaeminck</span></li>
+                    <li><span class="nombreUI"></span></li>
                     <li><span>Inicio</span></li>
                     <li class="icons mensaje"></li>
                     <li class="icons addFriend"></li>
@@ -40,7 +40,7 @@
         <aside>
             <header>
                 <img src="https://unavatar.io/kikobeats?ttl=1h" alt="">
-                <h3>Ana Vlaeminck</h3>
+                <h3 class="nombreUI"></h3>
             </header>
             <div>
                 <ul class="aside-list">
@@ -83,7 +83,7 @@
                 </div>
                 <div class="main-input">
                     <i class="update-img"></i>
-                    <input class="input-main" placeholder="What's on your mind, Ana?" type="text">
+                    <input class="input-main nombreUIInput" placeholder="What's on your mind, Ana?" type="text">
                 </div>
                 <div class="footer-buttons">
                     <div class="div-footer">
@@ -111,6 +111,25 @@
         </aside>
     </main>
 
+    <div class="messageContainer minimized">
+        <header class="container-header-chat">
+            <span>Chat</span>
+        </header>
+        <section class="containerChats"></section>
+    </div>
+
+    <template id="template-chat">
+        <div class="chat">
+            <div class="nombreChat">
+                <span></span>
+            </div>
+        </div>
+    </template>
+
+
+
+    <script src="actualizarUI.js"></script>
+    <script src="chat.js"></script>
 </body>
 
 </html>
