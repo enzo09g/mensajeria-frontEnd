@@ -43,8 +43,8 @@ async function login(objeto) {
         const errorData = await response.json();
         console.log("Error: " + errorData.mensaje)
     } else {
-        const token = await response.json();
-        localStorage.setItem('token', JSON.stringify(token));
+        const datos = await response.json();
+        localStorage.setItem('datos', JSON.stringify(datos));
         window.location.href = "/home.html"
     }
 }
