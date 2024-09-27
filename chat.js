@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function desplegarChat() {
     const chatContainer = document.querySelector('.messageContainer');
-    chatContainer.classList.toggle('minimized')
-    chatContainer.classList.toggle('expanded')
+    requestAnimationFrame(() => {
+        chatContainer.classList.toggle('minimized')
+        chatContainer.classList.toggle('expanded')
+    })
 }

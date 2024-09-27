@@ -1,4 +1,5 @@
 const URL_CHATS = 'http://localhost:3000/get_chats'
+const URL_SEND = 'http://localhost:3000/send'
 
 document.addEventListener('DOMContentLoaded', async () => {
     actualizrNombre();
@@ -27,6 +28,7 @@ async function agregarContactos() {
     contactos.forEach(contacto => {
         const nuevoChat = template.content.cloneNode(true);
         nuevoChat.querySelector('.nombreChat span').textContent = contacto.nombre + " " + contacto.apellido
+        nuevoChat.querySelector('.chat').setAttribute('data-email', contacto.email)
         containerChats.appendChild(nuevoChat)
     })
     return contactos.length;
@@ -53,11 +55,63 @@ async function getChats() {
 }
 
 function agregarEventos() {
+    const modalCloseButton = document.querySelector('.closeButton')
+    const modalSendButton = document.querySelector('.sendButton')
     const chats = document.querySelectorAll('.chat');
-    console.log(chats)
     chats.forEach(element => {
-        element.addEventListener('click', () => {
-            alert("hola")
+        element.addEventListener('click', (event) => {
+            const chat = event.target.closest('.chat')
+            toggleOverlay()
+            updateOverlay(chat)
         })
     })
+
+    modalCloseButton.addEventListener('click', () => {
+        toggleOverlay()
+    })
+
+    modalSendButton.addEventListener('click', async () => {
+        await sendButton();
+        toggleOverlay();
+        document.querySelector('#mensaje-overlay').value = "";
+
+    })
+}
+
+
+function toggleOverlay() {
+    const overlay = document.querySelector('.overlay');
+    const body = document.querySelector('body')
+    overlay.classList.toggle('active');
+    body.classList.toggle('overflow-disabled')
+}
+
+function updateOverlay(chat) {
+    const emailOverlay = document.querySelector('#email-overlay')
+    const email = chat.getAttribute('data-email');
+    emailOverlay.value = email
+}
+
+async function sendButton() {
+    const mensaje = {
+        emisor: JSON.parse(localStorage.getItem('datos')).email,
+        receptor: document.querySelector('#email-overlay').value,
+        contenido: document.querySelector('#mensaje-overlay').value
+    }
+
+    const response = await fetch(URL_SEND, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(mensaje)
+    })
+    if (!response.ok) {
+        const dataError = response.json()
+        console.log(dataError)
+    } else {
+        const data = await response.json()
+        console.log(data)
+    }
+
 }

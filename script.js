@@ -60,7 +60,7 @@ function registerForm() {
     return persona;
 }
 
-function loginForm(){
+function loginForm() {
     const persona = {};
     persona.email = document.querySelector('#emailLg').value
     persona.contraseña = document.querySelector('#contraseñaLg').value
