@@ -1,6 +1,6 @@
-const URL_CHATS = 'https://backend-seven-livid.vercel.app/get_chats'
-const URL_SEND = 'https://backend-seven-livid.vercel.app/send'
-const URL_MESSAGES_UNREAD = 'https://backend-seven-livid.vercel.app/unread_messages_count'
+const URL_CHATS = 'https://mensajeria-backend.onrender.com/get_chats'
+const URL_SEND = 'https://mensajeria-backend.onrender.com/send'
+const URL_MESSAGES_UNREAD = 'https://mensajeria-backend.onrender.com/unread_messages_count'
 
 
 document.addEventListener('DOMContentLoaded', async () => {
