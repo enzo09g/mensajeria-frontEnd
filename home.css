@@ -181,6 +181,27 @@ nav {
     }
 }
 
+@keyframes shake3 {
+    from{
+        transform: rotate(0deg);
+    }
+    12%{
+        transform: rotate(60deg);
+    }
+    25%{
+        transform: rotate(-60deg);
+    }
+    50%{
+        transform: rotate(60deg);
+    }
+    75%{
+        transform: rotate(-60deg);
+    }
+    to{
+        transform: rotate(0);
+    }
+}
+
 
 .icons.mensajes.scale {
     scale: 1.5;

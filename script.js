@@ -1,5 +1,5 @@
-const URL_REGISTER = "http://localhost:3000/register";
-const URL_LOGIN = "http://localhost:3000/login";
+const URL_REGISTER = "http://backend-seven-livid.vercel.app/register";
+const URL_LOGIN = "http://backend-seven-livid.vercel.app/login";
 
 document.addEventListener('DOMContentLoaded', () => {
     const registrationButton = document.querySelector('#registrationButton')

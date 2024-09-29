@@ -1,6 +1,6 @@
-const URL_CHATS = 'http://localhost:3000/get_chats'
-const URL_SEND = 'http://localhost:3000/send'
-const URL_MESSAGES_UNREAD = 'http://localhost:3000/unread_messages_count'
+const URL_CHATS = 'http://backend-seven-livid.vercel.app/get_chats'
+const URL_SEND = 'http://backend-seven-livid.vercel.app/send'
+const URL_MESSAGES_UNREAD = 'http://backend-seven-livid.vercel.app/unread_messages_count'
 
 
 document.addEventListener('DOMContentLoaded', async () => {
