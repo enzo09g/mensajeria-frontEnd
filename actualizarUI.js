@@ -1,11 +1,28 @@
 const URL_CHATS = 'http://localhost:3000/get_chats'
 const URL_SEND = 'http://localhost:3000/send'
+const URL_MESSAGES_UNREAD = 'http://localhost:3000/unread_messages_count'
+
 
 document.addEventListener('DOMContentLoaded', async () => {
     actualizrNombre();
     await agregarContactos();
     agregarEventos();
+    const mensajesNoLeidos = await getUnreadMessages();
+    updateMessageIcon(mensajesNoLeidos.mensajesNoLeidos)
+    console.log(mensajesNoLeidos)
 })
+
+function updateMessageIcon(nroMensajes) {
+    const iconMessage = document.querySelector('#iconMessage');
+
+    if (nroMensajes != 0) {
+        iconMessage.classList.add(`mensajes${nroMensajes}`)
+        iconMessage.classList.add(`scale`)
+        setTimeout(() => {
+            iconMessage.classList.remove(`scale`)
+        }, 2400);
+    }
+}
 
 function actualizrNombre() {
     const { nombre, apellido } = JSON.parse(localStorage.getItem('datos'))
@@ -90,6 +107,23 @@ function updateOverlay(chat) {
     const emailOverlay = document.querySelector('#email-overlay')
     const email = chat.getAttribute('data-email');
     emailOverlay.value = email
+}
+
+async function getUnreadMessages() {
+    const sendData = JSON.parse(localStorage.getItem('datos'));
+    const response = await fetch(URL_MESSAGES_UNREAD, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(sendData)
+    })
+    if (!response.ok) {
+        const errorData = await response.json()
+        console.log("Error:" + errorData)
+    } else {
+        return response.json();
+    }
 }
 
 async function sendButton() {
