@@ -1,5 +1,5 @@
-const URL_REGISTER = "http://localhost:3000/register";
-const URL_LOGIN = "http://localhost:3000/login";
+const URL_REGISTER = "https://backend-seven-livid.vercel.app/register";
+const URL_LOGIN = "https://backend-seven-livid.vercel.app/login";
 
 document.addEventListener('DOMContentLoaded', () => {
     const registrationButton = document.querySelector('#registrationButton')
@@ -43,8 +43,8 @@ async function login(objeto) {
         const errorData = await response.json();
         console.log("Error: " + errorData.mensaje)
     } else {
-        const token = await response.json();
-        localStorage.setItem('token', JSON.stringify(token));
+        const datos = await response.json();
+        localStorage.setItem('datos', JSON.stringify(datos));
         window.location.href = "/home.html"
     }
 }
@@ -60,7 +60,7 @@ function registerForm() {
     return persona;
 }
 
-function loginForm(){
+function loginForm() {
     const persona = {};
     persona.email = document.querySelector('#emailLg').value
     persona.contraseña = document.querySelector('#contraseñaLg').value
