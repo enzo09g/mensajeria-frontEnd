@@ -1,4 +1,4 @@
-const URL_CHECK = "http://backend-seven-livid.vercel.app/home"
+const URL_CHECK = "https://backend-seven-livid.vercel.app/home"
 recuperarToken();
 
 async function recuperarToken() {
