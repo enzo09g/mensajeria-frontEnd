@@ -1,4 +1,4 @@
-const URL_CHECK = "https://mensajeria-backend.onrender.com/home"
+const URL_CHECK = "http://localhost:3001/home"
 recuperarToken();
 
 async function recuperarToken() {

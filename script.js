@@ -1,5 +1,5 @@
-const URL_REGISTER = "https://mensajeria-backend.onrender.com/register";
-const URL_LOGIN = "https://mensajeria-backend.onrender.com/login";
+const URL_REGISTER = "http://localhost:3001/register";
+const URL_LOGIN = "http://localhost:3001/login";
 
 document.addEventListener('DOMContentLoaded', () => {
     const registrationButton = document.querySelector('#registrationButton')

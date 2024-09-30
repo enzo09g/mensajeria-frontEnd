@@ -1,6 +1,6 @@
-const URL_CHATS = 'https://mensajeria-backend.onrender.com/get_chats'
-const URL_SEND = 'https://mensajeria-backend.onrender.com/send'
-const URL_MESSAGES_UNREAD = 'https://mensajeria-backend.onrender.com/unread_messages_count'
+const URL_CHATS = 'http://localhost:3001/get_chats'
+const URL_SEND = 'http://localhost:3001/send'
+const URL_MESSAGES_UNREAD = 'http://localhost:3001/unread_messages_count'
 
 
 document.addEventListener('DOMContentLoaded', async () => {
