@@ -273,7 +273,6 @@ main {
     height: 100%;
     overflow: hidden;
 
-
     aside {
         grid-column: span 1;
         display: grid;
@@ -316,6 +315,14 @@ main {
             flex-direction: column;
         }
     }
+
+    .left-aside{
+        background-color: #f4f4f4;
+        border: 1px solid #EDEDEF;
+        padding: 4px;
+        border-radius: 4px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
 }
 
 
@@ -338,6 +345,7 @@ main {
 
 .header-buttons {
     display: flex;
+    background-color: #f4f4f4;
     border: 1px solid #EDEDEF;
     padding: 3px 5px;
 
@@ -346,6 +354,29 @@ main {
         align-items: center;
         border-right: 1px solid #E2E4E6;
         padding: 0 4px;
+        position: relative;
+    }
+
+    .section-header-button.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 90%);
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid white;
+    }
+
+    .section-header-button.active::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 70%);
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid #E2E4E6;
     }
 
     .section-header-button:last-child {
