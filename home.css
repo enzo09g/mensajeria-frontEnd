@@ -89,8 +89,8 @@ nav {
     background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 70%;
-    margin: 0 3px;
+    background-size: 90%;
+    margin: 0 10px;
     cursor: pointer;
 }
 
@@ -99,105 +99,142 @@ nav {
 }
 
 .icons.mensajes.mensajes1 {
-    background-image: url('./icons/1-messages.png');
+    background-image: url('./icons/Numeros/numero+9.png');
     transition: all 0.15s .8s;
-    animation: shake2;
+    animation: shake;
     animation-duration: .4s;
-    animation-delay: 2.2s;
+    animation-delay: 2s;
 }
 
 .icons.mensajes.mensajes2 {
     background-image: url('./icons/2-messages.png');
     transition: all 0.15s .8s;
+    animation: shake;
+    animation-duration: .4s;
+    animation-delay: 2s;
 }
 
 .icons.mensajes.mensajes3 {
     background-image: url('./icons/3-messages.png');
     transition: all 0.15s .8s;
+    animation: shake;
+    animation-duration: .4s;
+    animation-delay: 2s;
 }
 
 
 .icons.mensajes.mensajes4 {
     background-image: url('./icons/4-messages.png');
     transition: all 0.15s .8s;
+    animation: shake;
+    animation-duration: .4s;
+    animation-delay: 2s;
 }
 
 .icons.mensajes.mensajes5 {
     background-image: url('./icons/5-messages.png');
     transition: all 0.15s .8s;
+    animation: shake;
+    animation-duration: .4s;
+    animation-delay: 2s;
 }
 
 
 .icons.mensajes.mensajes6 {
     background-image: url('./icons/6-messages.png');
     transition: all 0.15s .8s;
+    animation: shake;
+    animation-duration: .4s;
+    animation-delay: 2s;
 }
 
 .icons.mensajes.mensajes7 {
     background-image: url('./icons/7-messages.png');
     transition: all 0.15s .8s;
+    animation: shake;
+    animation-duration: .4s;
+    animation-delay: 2s;
 }
 
 
 .icons.mensajes.mensajes8 {
     background-image: url('./icons/8-messages.png');
     transition: all 0.15s .8s;
+    animation: shake;
+    animation-duration: .4s;
+    animation-delay: 2s;
 }
 
 .icons.mensajes.mensajes9 {
     background-image: url('./icons/9-messages.png');
     transition: all 0.15s .8s;
+    animation: shake;
+    animation-duration: .4s;
+    animation-delay: 2s;
 }
 
 .icons.mensajes.mensajesPlus9 {
     background-image: url('./icons/+9-messages.png');
     transition: all 0.15s .8s;
+    animation: shake;
+    animation-duration: .4s;
+    animation-delay: 2s;
 }
 
 @keyframes shake {
-    from{
+    from {
         transform: rotateY(0deg);
     }
-    50%{
+
+    50% {
         transform: rotateY(-180deg);
     }
-    to{
+
+    to {
         transform: rotateY(360deg);
     }
-}
+}   
 
 @keyframes shake2 {
-    from{
+    from {
         transform: rotate(0deg);
     }
-    25%{
+
+    25% {
         transform: rotate(60deg);
     }
-    75%{
+
+    75% {
         transform: rotate(-60deg);
     }
-    to{
+
+    to {
         transform: rotate(0);
     }
 }
 
 @keyframes shake3 {
-    from{
+    from {
         transform: rotate(0deg);
     }
-    12%{
+
+    12% {
         transform: rotate(60deg);
     }
-    25%{
+
+    25% {
         transform: rotate(-60deg);
     }
-    50%{
+
+    50% {
         transform: rotate(60deg);
     }
-    75%{
+
+    75% {
         transform: rotate(-60deg);
     }
-    to{
+
+    to {
         transform: rotate(0);
     }
 }
@@ -316,7 +353,7 @@ main {
         }
     }
 
-    .left-aside{
+    .left-aside {
         background-color: #f4f4f4;
         border: 1px solid #EDEDEF;
         padding: 4px;
